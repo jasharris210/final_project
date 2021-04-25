@@ -14,7 +14,7 @@ app.use(express.static("src"));
 // });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/millenia/src/components", "App.js"));
+  res.sendFile(path.join(__dirname, "./millenia/src/components", "App.js"));
 });
 
 app.get("/api/music", cors(), (req, res) => {
