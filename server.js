@@ -9,9 +9,9 @@ app.use(express.static("public"));
 
 app.use(express.static("src"));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(publicPath, "App.js"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(publicPath, "App.js"));
+// });
 
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/millenia/src/components", "App.js"));
