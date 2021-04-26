@@ -176,10 +176,10 @@ app.get("/api/popCulture", cors(), (req, res) => {
   res.json(popCulture);
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "millenia/public")));
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/millenia/public", "index.html"));
+  res.sendFile(path.join(__dirname, "millenia/public", "index.html"));
 });
 
 const port = 5000;
