@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const publicPath = path.join(__dirname, "..", "src");
+// const publicPath = path.join(__dirname, "..", "src");
 
 const app = express();
 
@@ -13,8 +13,14 @@ app.use(express.static("src"));
 //   res.sendFile(path.join(publicPath, "App.js"));
 // });
 
+// app.get("*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "./millenia/src/components", "App.js"));
+// });
+
+app.use(express.static(path.join(__dirname, "public")));
+
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./millenia/src/components", "App.js"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/api/music", cors(), (req, res) => {
