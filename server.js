@@ -5,9 +5,9 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
-app.use(express.static("src"));
+// app.use(express.static("src"));
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(publicPath, "App.js"));
@@ -23,10 +23,10 @@ app.use(express.static("src"));
 //   res.sendFile(path.join(__dirname, "public", "index.html"));
 // });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "./public")));
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "./public", "index.html"));
 });
 
 app.get("/api/music", cors(), (req, res) => {
