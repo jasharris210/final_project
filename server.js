@@ -25,6 +25,10 @@ app.use(express.static("src"));
 
 app.use(express.static(path.join(__dirname, "build")));
 
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "components", "index.html"));
+});
+
 app.get("/api/music", cors(), (req, res) => {
   const music = [
     {
