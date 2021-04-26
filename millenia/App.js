@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
-import Music from "./components/music";
-import Lewks from "./components/lewks";
-import Section from "./components/section";
-import PopCulture from "./components/pop_culture";
-import Films from "./components/films";
+import Music from "./src/components/music";
+import Lewks from "./src/components/lewks";
+import Section from "./src/components/section";
+import PopCulture from "./src/components/pop_culture";
+import Films from "./src/components/films";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import Home from "./components/home";
-import { SketchTrials } from "./components/sketchTrials";
+import Home from "./src/components/home";
+import { SketchTrials } from "./src/components/sketchTrials";
 
 class App extends Component {
   render() {
